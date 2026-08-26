@@ -1,0 +1,23 @@
+[project]
+name = "python-security-code-scanner"
+version = "0.1.0"
+description = "AST-based static security scanner for Python source: eval/exec, shell injection, unsafe deserialization, weak hashes, hardcoded secrets, and more."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "T-X" }]
+dependencies = []
+
+[project.scripts]
+python-security-code-scanner = "python_security_code_scanner:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["python_security_code_scanner"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
